@@ -26,8 +26,8 @@
                 <td th:text="${gr.id}"></td>
                 <td th:text="${gr.title}"></td>
                 <td><a th:href="@{/delete_group/{id}(id=${gr.id})}">удалить</a></td>
-                <td></td>
-                <td></td>
+                <td><a th:href="@{/edit_group/{id}(id=${gr.id})}">править</a></td>
+                <td><a th:href="@{/students_group/{id}(id=${gr.id})}">студенты</a></td>
             </tr>
         </tbody>
     </table>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Студенты</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+<body>
+    <h1 th:text="'Группа ' + ${gr.title}"></h1>
+    <table>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Имя</th>
+            <th>Возраст</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="st : ${gr.students}">
+                <td th:text="${st.id}"></td>
+                <td th:text="${st.name}"></td>
+                <td th:text="${st.age}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
